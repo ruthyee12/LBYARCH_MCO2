@@ -24,13 +24,14 @@ x86-64 Program (distance_asm.asm):
 <h3>Comparative Execution Time</h3>
 The table below shows the comparative execution time between the C program and the x86-64 assembly program for different vector sizes. Each entry represents the average execution time over 30 runs.
 
-document with full table: https://docs.google.com/document/d/19bVG8V7awDUdRlvwDoRBK2JMAJe7xat8r5RNptiw0fA/edit?usp=sharing
+![image](https://github.com/user-attachments/assets/10c87bef-7d43-493f-b7cb-a627219334b8)
+![image](https://github.com/user-attachments/assets/ed25ea64-6f1d-40ec-9744-7e88fa878e8b)
 
 **AVERAGE EXECUTION TIME**
-|               | 2^20          | 2^24          | 2^30          |
+|               | 2^20          | 2^24          | 2^27          |
 | ------------- | ------------- | ------------- | ------------- |
-| C             | Content       |Content        |Content        |
-| x86-64        | Content       |Content        |Content        |
+| C             | 0.014813      |0.165494       |1.345304       |
+| x86-64        | 0.002461      |0.037354       |0.264277       |
 
 <hr>
 
@@ -40,7 +41,7 @@ The implementation of the same algorithm in two different programming environmen
 
 **Performance Comparison**
 
-Over several runs, the C implementation showed average execution times ranging from 0.010 to 0.012 seconds. The effective compilation and optimization strategies used by modern C compilers are responsible for this comparatively fast performance. However, with execution times ranging from 0.0022 to 0.0028 seconds, the x86-64 assembly implementation showed noticeably faster performance. The assembly code demonstrated the advantages of low-level programming for tasks requiring high performance, outperforming C by almost five times.
+Over several runs, the C implementation showed average execution times ranging from 0.010 to 0.012 seconds for vector size 2^20. This pattern of behaviour is also noticeable as the vector size increases. The effective compilation and optimization strategies used by modern C compilers are responsible for this comparatively fast performance. However, with execution times ranging from 0.0022 to 0.0028 seconds, the x86-64 assembly implementation showed noticeably faster performance. The assembly code demonstrated the advantages of low-level programming for tasks requiring high performance, outperforming C by almost five times.
 The superior performance of the assembly code can be attributed to its direct access to CPU instructions and registers. Assembly attains a higher level of efficiency by reducing overhead, such as memory access and function call abstractions that are inherent in higher-level languages. Because of this, it is especially well-suited for computationally demanding tasks like calculating distances or doing other repeating mathematical calculations.
 
 
