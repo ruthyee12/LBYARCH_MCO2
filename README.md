@@ -34,9 +34,6 @@ The table below shows the comparative execution time between the C program and t
 <hr>
 The performance comparison between the C program and the x86-64 assembly program highlights the efficiency of low-level optimization. While the C kernel performed adequately for smaller vector sizes 2^20, its average execution time increased significantly as the vector size grew due to scalar processing overhead. In contrast, the x86-64 kernel consistently outperformed the C implementation across all vector sizes, with the performance gap widening for larger datasets 2^24 and 2^30. This advantage stems from the use of SIMD floating-point instructions in the assembly code, enabling faster parallel computation. Overall, the x86-64 kernel demonstrates superior performance, particularly for large-scale computations, showcasing the benefits of hardware-level optimization.
 
-<h3>Analysis <h3>
-<hr>
-The performance comparison between the C program and the x86-64 assembly program highlights the efficiency of low-level optimization. While the C kernel performed adequately for smaller vector sizes 2^20, its average execution time increased significantly as the vector size grew due to scalar processing overhead. In contrast, the x86-64 kernel consistently outperformed the C implementation across all vector sizes, with the performance gap widening for larger datasets 2^24 and 2^30. This advantage stems from the use of SIMD floating-point instructions in the assembly code, enabling faster parallel computation. Overall, the x86-64 kernel demonstrates superior performance, particularly for large-scale computations, showcasing the benefits of hardware-level optimization.
+<h3>Screenshot</h3>
+https://
 
-<h3> Screenshot: <h3> <hr> https://
-<h3> Video demo: <h3> <hr> https://
