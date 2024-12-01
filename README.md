@@ -24,7 +24,29 @@ x86-64 Program (distance_asm.asm):
 <h3>Comparative Execution Time</h3>
 The table below shows the comparative execution time between the C program and the x86-64 assembly program for different vector sizes. Each entry represents the average execution time over 30 runs.
 
+C:
+|   Pass   | 2^20          | 2^24          | 2^30          |
+| -------- | ------------- | ------------- | ------------- |
+| 1        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 3        | Content       |Content        |Content        |
+| 4        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
+| 2        | Content       |Content        |Content        |
 
+Assembly:
+
+
+AVERAGE EXECUTION TIME
 |               | 2^20          | 2^24          | 2^30          |
 | ------------- | ------------- | ------------- | ------------- |
 | C             | Content       |Content        |Content        |
@@ -58,7 +80,8 @@ For certain use situations, especially those requiring maximum efficiency, the p
 <hr>
 
 <h3>Screenshot</h3>
-https://drive.google.com/drive/folders/1OeMeODYR76wkL0-1kCToVIN4jmEWpGju?usp=sharing
+![image](https://github.com/user-attachments/assets/ec4e39e8-282d-482b-a160-103935cb266d)
+
 <hr>
 
 <h3>Video demo</h3>
