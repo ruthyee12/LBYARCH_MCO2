@@ -67,38 +67,51 @@ int main() {
     printf("Initial points:\n");
     display_points(X1, X2, Y1, Y2, n);
 
-    // Time of C kernel for 30 iterations
+    clock_t start_c = clock();
     double total_time_c = 0.0;
     for (int i = 0; i < 30; i++) {
-        clock_t start_c = clock();
+        clock_t start_iter = clock();
         distance_c(X1, X2, Y1, Y2, Z_c, n);
-        clock_t end_c = clock();
-        total_time_c += (double)(end_c - start_c) / CLOCKS_PER_SEC;
+        clock_t end_iter = clock();
+        total_time_c += (double)(end_iter - start_iter) / CLOCKS_PER_SEC;
     }
+    clock_t end_c = clock();
     double avg_time_c = total_time_c / 30.0;
 
-    // Time of ASM kernel for 30 iterations
+    clock_t start_asm = clock();
     double total_time_asm = 0.0;
     for (int i = 0; i < 30; i++) {
-        clock_t start_asm = clock();
+        clock_t start_iter = clock();
         distance_asm(n, X1, X2, Y1, Y2, Z);
-        clock_t end_asm = clock();
-        total_time_asm += (double)(end_asm - start_asm) / CLOCKS_PER_SEC;
+        clock_t end_iter = clock();
+        total_time_asm += (double)(end_iter - start_iter) / CLOCKS_PER_SEC;
     }
+    clock_t end_asm = clock();
     double avg_time_asm = total_time_asm / 30.0;
 
     printf("\nResults for n = %d:\n", n);
+
+    printf("  C start time  (clock ticks): %ld\n", (long)start_c);
+    printf("  C end time  (clock ticks): %ld\n", (long)end_c);
     printf("  C kernel average time: %.6f seconds\n", avg_time_c);
-    printf("  ASM kernel average time: %.6f seconds\n", avg_time_asm);
-
     display_first_ten_elements(Z_c, n, "C kernel result");
-    display_first_ten_elements(Z, n, "ASM kernel result");
 
+    printf("  x86-64 start time (clock ticks): %ld\n", (long)start_asm);
+    printf("  x86-64 end time (clock ticks): %ld\n", (long)end_asm);
+    printf("  x86-64 kernel average time: %.6f seconds\n", avg_time_asm);
+    display_first_ten_elements(Z, n, "x86-64 kernel result");
+
+    int errors_found = 0;
     for (int i = 0; i < n; i++) {
         if (fabs(Z_c[i] - Z[i]) > 1e-6) {
-            printf("Mismatch at index %d: C = %.6f, ASM = %.6f\n", i, Z_c[i], Z[i]);
+            printf("Mismatch at index %d: C = %.6f, x86-64 = %.6f\n", i, Z_c[i], Z[i]);
+            errors_found = 1;
             break;
         }
+    }
+
+    if (!errors_found) {
+        printf("\nResults matched. No errors found.\n");
     }
 
     free(X1);
