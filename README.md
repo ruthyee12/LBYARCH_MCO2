@@ -30,9 +30,9 @@ The table below shows the comparative execution time between the C program and t
 | C             | Content       |Content        |Content        |
 | x86-64        | Content       |Content        |Content        |
 
-<h3>Overview</h3>
+<h3>Analysis</h3>
 <hr>
-This project implements a kernel that calculates the Euclidean distances between coordinate points across two vectors. The kernel is implemented in two versions: a C version and an x86-64 assembly language version using SIMD floating-point instructions. The goal is to compare the performance and correctness of both implementations across different input sizes and evaluate the execution time for various vector lengths.
+The performance comparison between the C program and the x86-64 assembly program highlights the efficiency of low-level optimization. While the C kernel performed adequately for smaller vector sizes 2^20, its average execution time increased significantly as the vector size grew due to scalar processing overhead. In contrast, the x86-64 kernel consistently outperformed the C implementation across all vector sizes, with the performance gap widening for larger datasets 2^24 and 2^30. This advantage stems from the use of SIMD floating-point instructions in the assembly code, enabling faster parallel computation. Overall, the x86-64 kernel demonstrates superior performance, particularly for large-scale computations, showcasing the benefits of hardware-level optimization.
 
 <h3>Analysis <h3>
 <hr>
