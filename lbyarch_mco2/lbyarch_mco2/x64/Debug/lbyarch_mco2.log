@@ -1,0 +1,3 @@
+﻿  Performing Custom Build Tools
+  The filename, directory name, or volume label syntax is incorrect.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): error MSB8066: Custom build for 'distance_asm.asm' exited with code 123.

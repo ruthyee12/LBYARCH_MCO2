@@ -1,0 +1,2 @@
+^C:\USERS\USER\DESKTOP\LBYARCH_MCO2\LBYARCH_MCO2\DISTANCE_ASM.ASM
+c::\nasm\nasm -f win64 distance_asm.asm
