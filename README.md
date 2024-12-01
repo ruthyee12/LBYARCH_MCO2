@@ -1,4 +1,4 @@
-# LBYARCH Machine Project 2
+# LBYARCH x86-to-C Interface Programming Project
 
 By Ruth Yee and Patricia Zamora (S14)
 
@@ -22,6 +22,16 @@ x86-64 Program (distance_asm.asm):
 
 <h3>Comparative Execution Time</h3>
 <hr>
+The table below shows the comparative execution time between the C program and the x86-64 assembly program for different vector sizes. Each entry represents the average execution time over 30 runs.
+
+|               | 2^20          | 2^24          | 2^30          |
+| ------------- | ------------- | ------------- | ------------- |
+| C             | Content       |Content        |Content        |
+| x86-64        | Content       |Content        |Content        |
 
 <h3>Analysis <h3>
 <hr>
+The performance comparison between the C program and the x86-64 assembly program highlights the efficiency of low-level optimization. While the C kernel performed adequately for smaller vector sizes (\(2^{20}\)), its average execution time increased significantly as the vector size grew due to scalar processing overhead. In contrast, the x86-64 kernel consistently outperformed the C implementation across all vector sizes, with the performance gap widening for larger datasets (\(2^{24}\) and \(2^{30}\)). This advantage stems from the use of SIMD floating-point instructions in the assembly code, enabling faster parallel computation. Overall, the x86-64 kernel demonstrates superior performance, particularly for large-scale computations, showcasing the benefits of hardware-level optimization.
+
+<h3> Screenshot: <h3> https://
+<h3> Video demo: <h3> https://
