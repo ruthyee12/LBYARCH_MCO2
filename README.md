@@ -47,7 +47,7 @@ The superior performance of the assembly code can be attributed to its direct ac
 During several test runs, the first ten elements of the output array Z yielded the same results for both implementations. This precision consistency shows that the logic of the method was accurately converted into assembly instructions. Examples of these outputs are Z[0] = 2.50000000, Z[1] = 1.58113885, and Z[2] = 2.69258237, proving that the calculations were performed correctly in both settings.
 
 
-**Analysis**
+**Results**
 
 Assembly code performs exceptionally well, but at the expense of greater complexity and less readability. Writing and debugging assembly code can take a lot of effort and requires a thorough understanding of hardware architecture. However, C is a popular option for general-purpose programming because it strikes a balance between performance and usability. Depending on the needs of the assignment, the trade-offs between the two languages should be carefully evaluated.
 
@@ -58,7 +58,7 @@ For certain use situations, especially those requiring maximum efficiency, the p
 <hr>
 
 <h3>Screenshot</h3>
-https://
+https://drive.google.com/drive/folders/1OeMeODYR76wkL0-1kCToVIN4jmEWpGju?usp=sharing
 <hr>
 
 <h3>Video demo</h3>
